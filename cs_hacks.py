@@ -92,7 +92,7 @@ class BlindNavApp(App):
     def provide_audio_feedback(self, message):
         tts = gTTS(message, lang='en')
         tts.save("feedback.mp3")
-        os.system("mpg321 feedback.mp3")  # Play the audio feedback
+        os.system("afplay feedback.mp3")  # Play the audio feedback
 
 
 if __name__ == '__main__':
